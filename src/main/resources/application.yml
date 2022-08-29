@@ -1,0 +1,15 @@
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  flyway:
+    enabled: false
+multitenant:
+  datasources:
+    - url: jdbc:mysql://localhost:3308/fly1?useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: root
+      name: fly1
+    - url: jdbc:mysql://localhost:3308/fly2?useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: root
+      name: fly2
