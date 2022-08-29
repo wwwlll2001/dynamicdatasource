@@ -51,4 +51,6 @@ user包下的代码为测试demo代码
 
 目前用threadlocal的方式管理当前上下文的数据源信息，在多线程的场景下会出现找不到当前上下文的数据源的情况（子线程没有父线程的threadlocal变量），可以通过 [Transmittable Thread Local](https://github.com/alibaba/transmittable-thread-local) 来解决此问题
 
+还需要考虑在线程结束的时候清除（比如借助aop等手段）threadlocal中的数据源信息
+
 
