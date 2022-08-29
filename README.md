@@ -23,7 +23,7 @@ spring:
 ```aidl
 multitenant:
   datasources:
-    - url: jdbc:mysql://localhost:3308/fly1?useSSL=false&allowPublicKeyRetrieval=true
+    - url:: jdbc:mysql://localhost:3308/fly1?useSSL=false&allowPublicKeyRetrieval=true
       username: root
       password: root
       name: fly1
