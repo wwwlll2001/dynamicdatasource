@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import javax.sql.DataSource;
 import java.util.*;
 
+import static java.util.Collections.unmodifiableCollection;
+
 
 @Component
 @Getter
@@ -23,7 +25,7 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
         super.setTargetDataSources(buildTargetDataSources(dataSourcePropertiesList));
         super.afterPropertiesSet();
 
-        dataSources = Collections.unmodifiableCollection(getResolvedDataSources().values());
+        dataSources = unmodifiableCollection(getResolvedDataSources().values());
     }
 
     @Override
