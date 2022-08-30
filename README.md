@@ -20,7 +20,7 @@ spring:
 
 ## 配置多数据源
 
-```aidl
+```
 multitenant:
   datasources:
     - url: jdbc:mysql://localhost:3308/fly1?useSSL=false&allowPublicKeyRetrieval=true
